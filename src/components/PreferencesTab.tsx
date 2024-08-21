@@ -14,14 +14,15 @@ const PreferencesTab = () => {
       setSelectedTheme(theme);
       setTheme(theme);
     };
+
     const { soundEnabled,setSoundEnabled } =usePreferences()
     const [playMouseClick]=useSound('/sounds/mouse-click.mp3')
     const [playSoundOn]=useSound('/sounds/sound-on.mp3',{volume:0.2})
     const [playSoundOff]=useSound('/sounds/sound-off.mp3',{volume:0.2})
+  
 
-    
     return (
-    <div className='flex flex-wrap gap-2 px-1 md:px-2 mt-5 justify-center items-center'>
+    <div className='flex flex-wrap gap-2 px-1 md:px-2'>
  <Button variant='outline' size='icon' onClick={() =>{ handleTheme(selectedTheme === 'dark' ? 'light' : 'dark'); playMouseClick() } }>
         {selectedTheme === 'dark' ? (
             <SunIcon className='size-[1.2rem] text-muted-foreground' />
