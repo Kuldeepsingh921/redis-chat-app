@@ -19,6 +19,7 @@ const PreferencesTab = () => {
     const [playSoundOn]=useSound('/sounds/sound-on.mp3',{volume:0.2})
     const [playSoundOff]=useSound('/sounds/sound-off.mp3',{volume:0.2})
 
+    
     return (
     <div className='flex flex-wrap gap-2 px-1 md:px-2 mt-5 justify-center items-center'>
  <Button variant='outline' size='icon' onClick={() =>{ handleTheme(selectedTheme === 'dark' ? 'light' : 'dark'); playMouseClick() } }>
@@ -28,6 +29,7 @@ const PreferencesTab = () => {
             <MoonIcon className='size-[1.2rem] text-muted-foreground' />
         )}
       </Button>
+
 
 <Button variant={'outline'} size={'icon'} onClick={()=>{setSoundEnabled(!soundEnabled)
   soundEnabled? playSoundOff():playSoundOn()
